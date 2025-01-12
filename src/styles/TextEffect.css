@@ -1,0 +1,21 @@
+.text-effect-container {
+    font-size: 1.125rem;  
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .text-effect-container {
+      font-size: 2rem;  
+    }
+  }
+  
+  .text-white {
+    color: white;
+  }
+  
+  .text-highlight {
+    color: #00bcd4; 
+  }
+  

@@ -1,0 +1,155 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #001f3f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-title {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.highlight {
+  color: #00d1d1;
+}
+
+.desktop-menu {
+  display: none;
+}
+.desktop-menu a {
+  margin: 0 0.8rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 1.2rem;
+}
+.desktop-menu a.link-hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: cyan;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.desktop-menu a.link-hover:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.hire-button-container {
+  display: none;
+  margin-right: 2rem;
+}
+.hire-button {
+  background-color: #3bcfe9;
+  border: none;
+  padding: 10px 10px;
+  font-family: serif;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.hire-button:hover {
+  background-color: #00bcd4;
+}
+
+.menu-button {
+  display: block;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: #001f3f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  transition: right 0.3s ease;
+}
+.mobile-menu.open {
+  right: 0;
+}
+.close-button {
+  align-self: flex-end;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.mobile-links {
+  content: "";
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+.mobile-links a {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.mobile-links a.link-hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: cyan;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.mobile-links a.link-hover:hover::after {
+  width: 100%;
+  left: 0;
+}
+.mobile-hire-button {
+  margin-top: 2rem;
+  width: 100%;
+}
+.hire-button {
+  width: 100%;
+  text-align: center;
+  margin-left: 50px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .menu-button,
+  .mobile-menu,
+  .mobile-hire-button {
+    display: none;
+  }
+  .desktop-menu {
+    display: flex;
+  }
+  .hire-button-container {
+    display: block;
+  }
+}

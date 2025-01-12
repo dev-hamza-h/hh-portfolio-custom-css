@@ -1,0 +1,146 @@
+.skills-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #001f3f;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.skills-wrapper {
+  width: 100%;
+  max-width: 64rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding-top: 7rem;
+  animation: slideFromTop 0.8s ease-out;
+}
+
+.skills-title .highlight {
+  color: #00d9f9;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  margin: 4rem 0;
+  animation: slideInFromBottom 0.8s ease-out;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  background-color: #001f3f;
+  border: 2px solid #00d9f9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.7s ease-in-out;
+}
+
+.skill-card:hover {
+  background-color: #003366;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.progress-bar {
+  margin-left: auto;
+  width: 50%;
+  position: relative;
+  background-color: #fff6db;
+  border-radius: 999px;
+  height: 0.4rem;
+  overflow: hidden;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #00d9f9;
+  border-radius: 999px;
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-title {
+    font-size: 1.5rem;
+    padding-top: 5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .skill-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .skill-info {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .progress-bar {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}
